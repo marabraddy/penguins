@@ -1,0 +1,60 @@
+---
+title: "Penguins"
+format: html
+editor: visual
+---
+
+```{r}
+library(palmerpenguins)#install.packages("palmerpenguins")
+library(tidyverse)
+```
+
+## Data
+
+Here, we will explore and visualize data collected from the Palmer Station in Antarctica. The data set contains data from three different penguin species: Chinstrap, Adelie, and Gentoo.
+
+![](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png)
+
+## Single trait distribution
+
+```{r}
+ggplot(data = penguins) +
+  geom_point(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species))
+```
+
+```{r}
+ggplot(data = penguins) +
+  geom_col(mapping = aes(x = species, y = bill_length_mm))
+```
+
+## Relationship between multiple traits
+
+```{r}
+ggplot(data = penguins) +
+  geom_point(mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = sex)) +
+  facet_wrap(~species)
+```
+
+```{r}
+ggplot(data = penguins) +
+  geom_point(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species))
+```
+
+```{r}
+ggplot(data = penguins) +
+  geom_col(mapping = aes(x = body_mass_g, y = flipper_length_mm, fill = species))
+```
+
+## Sexual dimorphism
+
+```{r}
+ggplot(data = penguins) +
+  geom_point(mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = island)) +
+  facet_wrap(~sex)
+```
+
+```{r}
+ggplot(data = penguins) +
+  geom_density(mapping = aes(x = body_mass_g, fill = sex)) +
+  facet_wrap(~species)
+```

@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "penguins_doc.html",
+    "href": "penguins_doc.html",
+    "title": "Penguins",
+    "section": "",
+    "text": "library(palmerpenguins)#install.packages(\"palmerpenguins\")\n\n\nAttaching package: 'palmerpenguins'\n\n\nThe following objects are masked from 'package:datasets':\n\n    penguins, penguins_raw\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
+  },
+  {
+    "objectID": "penguins_doc.html#data",
+    "href": "penguins_doc.html#data",
+    "title": "Penguins",
+    "section": "Data",
+    "text": "Data\nHere, we will explore and visualize data collected from the Palmer Station in Antarctica. The data set contains data from three different penguin species: Chinstrap, Adelie, and Gentoo."
+  },
+  {
+    "objectID": "penguins_doc.html#single-trait-distribution",
+    "href": "penguins_doc.html#single-trait-distribution",
+    "title": "Penguins",
+    "section": "Single trait distribution",
+    "text": "Single trait distribution\n\nggplot(data = penguins) +\n  geom_point(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species))\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\nggplot(data = penguins) +\n  geom_col(mapping = aes(x = species, y = bill_length_mm))\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_col()`)."
+  },
+  {
+    "objectID": "penguins_doc.html#relationship-between-multiple-traits",
+    "href": "penguins_doc.html#relationship-between-multiple-traits",
+    "title": "Penguins",
+    "section": "Relationship between multiple traits",
+    "text": "Relationship between multiple traits\n\nggplot(data = penguins) +\n  geom_point(mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = sex)) +\n  facet_wrap(~species)\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\nggplot(data = penguins) +\n  geom_point(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species))\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\nggplot(data = penguins) +\n  geom_col(mapping = aes(x = body_mass_g, y = flipper_length_mm, fill = species))\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_col()`)."
+  },
+  {
+    "objectID": "penguins_doc.html#sexual-dimorphism",
+    "href": "penguins_doc.html#sexual-dimorphism",
+    "title": "Penguins",
+    "section": "Sexual dimorphism",
+    "text": "Sexual dimorphism\n\nggplot(data = penguins) +\n  geom_point(mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = island)) +\n  facet_wrap(~sex)\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\nggplot(data = penguins) +\n  geom_density(mapping = aes(x = body_mass_g, fill = sex)) +\n  facet_wrap(~species)\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_density()`)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ntres-6100-assignments-marabraddy",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  }
+]
